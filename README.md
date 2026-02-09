@@ -150,16 +150,15 @@ Ephemeral "Knowledge Packs" loaded only when needed.
 ```
 .agent/
 ├── rules/
-│   ├── service-pattern.md      # Rule 1: Architecture DNA
-│   └── unit-testing.md         # Rule 2: Quality DNA
+│   └── instructions-frontend.md 
+├── skills/
+│   └── expert-service.md  
+│   └── expert-http.md  
+│   └── expert-database.md  
+│   └── expert-frontend.md  
 ├── workflows/
-│   └── feature-unit-flow.md    # Workflow 3: The Playbook
-└── skills/
-    └── spatie-security/        # Skill 4: The Specialist Tool
-        └── SKILL.md
+    └── develop.md  
+
 ```
 
 ---
-
-
-
