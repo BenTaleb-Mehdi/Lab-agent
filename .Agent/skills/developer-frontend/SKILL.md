@@ -17,10 +17,16 @@ Build fast, interactive UIs that feel like an SPA. Keep Blade files clean by put
 
 ## ⚡ Actions
 
+<<<<<<< HEAD
 ### Action A: Component Creation
 > **Description**: Create a new external Alpine.js component.
 - **Inputs**: HTML structure and required data features.
 - **Outputs**: `Alpine.data('name', ...)` object in a JS file.
+=======
+### 3.  UX
+- **Optimistic UI:** Update the local state immediately when the user interacts, then sync with the server in the background.
+- **Zero Flicker:** Use `x-cloak` to prevent unstyled content from flashing on load.
+>>>>>>> 709ecc4e4392e06caaf46151272b646f58150500
 
 ### Action B: API Integration (AJAX)
 > **Description**: Connect the UI to Laravel backend using Fetch.
@@ -29,6 +35,7 @@ Build fast, interactive UIs that feel like an SPA. Keep Blade files clean by put
 
 ---
 
+<<<<<<< HEAD
 ## 🔄 Scenarios
 
 ### Scenario: Creating a Reactive List
@@ -42,3 +49,18 @@ Build fast, interactive UIs that feel like an SPA. Keep Blade files clean by put
 - **Style**: Use Tailwind CSS for styling.
 - **UX**: Use "Optimistic UI" (update local data before the server responds).
 - **Format**: Standardize headers for `XMLHttpRequest`.
+=======
+    async fetchItems() {
+        this.isLoading = true;
+        try {
+            const response = await fetch('/items', {
+                headers: { 'X-Requested-With': 'XMLHttpRequest' }
+            });
+            const result = await response.json();
+            this.items = result.data;
+        } finally {
+            this.isLoading = false;
+        }
+    }
+});
+>>>>>>> 709ecc4e4392e06caaf46151272b646f58150500
