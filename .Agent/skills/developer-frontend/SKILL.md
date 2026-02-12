@@ -21,7 +21,7 @@ Your mission is to build high-performance, reactive interfaces that feel like an
     - `X-CSRF-TOKEN` retrieved from the `<meta name="csrf-token">` tag.
 - **State Management:** Use `isLoading`, `data`, and `errors` properties in every component to manage the lifecycle of AJAX calls.
 
-### 3. Antigravity UX
+### 3.  UX
 - **Optimistic UI:** Update the local state immediately when the user interacts, then sync with the server in the background.
 - **Zero Flicker:** Use `x-cloak` to prevent unstyled content from flashing on load.
 
