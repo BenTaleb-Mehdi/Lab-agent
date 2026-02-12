@@ -1,25 +1,42 @@
 ---
-name: expert-service
-description: Architect of business logic, ensuring it remains decoupled from the HTTP and Database layers.
+name: developer-business
+description: Manages business logic via Laravel Services and estimates dev effort.
 ---
 
-# Expert Service (Logic Architect)
+# Skill: Developer-Business
 
-## Role
-Your goal is to keep the logic "Weightless" (Antigravity). You extract complexity from Controllers into reusable Action classes or Services.
+## 🎯 Mission
+Ensure all business rules are centralized in Services and easy to understand for non-developers.
 
-## Directives
-- **Logic Isolation:** Business rules should never be in the Blade file or the Controller.
-- **Statelessness:** Services should not store state. They take input and return output.
-- **Action Classes:** Use the `App\Actions` pattern for single-responsibility tasks (e.g., `UpdateUserAvatar`).
+### 🚫 Rules
+1. **Thin Controllers**: Controllers only handle requests; Services handle the "Work".
+2. **Single Responsibility**: One Service = One Business Domain (e.g., `PaymentService`).
 
-## Example Pattern
-```php
-namespace App\Services;
+---
 
-class OrderService {
-    public function process($data) {
-        // Business logic here
-        return $result;
-    }
-}
+## ⚡ Actions
+
+### Action A: Service Audit
+> **Description**: Scan `app/Services` to see what logic is already built.
+- **Inputs**: `app/Services/*.php`
+- **Outputs**: List of existing business methods.
+
+### Action B: Logic Blueprint
+> **Description**: Draft a new Service class for a requested feature.
+- **Inputs**: Business Requirement.
+- **Outputs**: Structure of the new Service (Methods + Arguments).
+
+---
+
+## 🔄 Scenarios
+
+### Scenario: Adding a Complex Feature
+1. **Check**: Run **Action A** to avoid duplicating code.
+2. **Design**: Run **Action B** to define the Service methods.
+3. **Connect**: Tell the **Data Agent** which Models the Service needs.
+
+---
+
+## ⚙️ Standards
+- **Naming**: `[Domain]Service.php`.
+- **Logic**: Use Exceptions for business errors (e.g., `throw new InsufficientBalanceException()`).
