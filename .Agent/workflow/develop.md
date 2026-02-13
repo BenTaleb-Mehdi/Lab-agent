@@ -1,7 +1,6 @@
 ---
 description: Orchestrates skills to generate a full Laravel CRUD (Model, Migration, Service, Controller, UI).
 ---
-
 # Workflow : CRUD Execution
 
 ## 1. Context & Objective
